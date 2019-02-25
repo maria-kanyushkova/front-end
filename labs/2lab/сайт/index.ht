@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>About me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    <style>
+	  img
+	  {
+	      width: 300px;		
+	  }
+	</style>
+  </head>
+  <body>
+    <h1>Обо мне</h1>
+    <div class="container">
+      <div class="information">
+        <a href="index.html">
+          <img src="img/image_me.jpg" alt="Я">
+        </a>
+        <div class="content">
+          <h2>Информация</h2>
+          <div class="text_info">
+          	<p>
+          	  Привет, меня зовут Маша. Мне 16 лет. Я ученица 10ого класса лицея Инфотех, а также староста своего класса, я очень доброжелательная и приветливая девочка, но это не точно.
+          	</p>
+          	<blockquote>
+          	  We are but the stones to pave the way
+          	  <p>(с) София Лэмб</p>
+          	</blockquote>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="important">
+      	<h2>Важное для меня</h2>
+      	<div class="my_box">
+      	  <div class="list">
+      	    <h3>Мои увлечения:</h3>
+      	    <ul>
+      	  	  <li>Фаершоу</li>
+        	  <li>Астрономия</li>
+      	      <li>Велоспорт</li>
+      	    </ul>
+      	  </div>
+      	  <div class="image">
+      	  	<img src="img/hobby/fireshow.jpg" alt="Фаершоу">
+      	  	<img src="img/hobby/astronomy.jpg" alt="Астрономия">
+      	  	<img src="img/hobby/racing.jpg" alt="Велоспорт">
+      	  </div>	
+      	</div>
+      	<div class="my_box">
+      	  <div class="list">
+      	    <h3>Мои любимые цвета:</h3>
+      	    <ol>
+      	  	  <li>Фиолетовый</li>
+        	  <li>Цвет неба</li>
+      	      <li>Зелёный</li>
+      	    </ol>
+      	  </div>
+      	  <div class="image">
+			<img src="img/color/purple.png" alt="Фиолетовый">
+     	    <img src="img/color/sky.jpg" alt="Цвет неба">
+     	    <img src="img/color/green.png" alt="Зелёный">  
+      	  </div>	
+      	</div>
+      </div>
+      <hr>
+      <div class="movies">
+      	<div class="film">
+      	  <img src="img/movies/intouchables.jpg" alt="1+1">
+      	  <h3>1+1</h3>
+      	  <p>Самый слёзный фильм</p>
+      	</div>
+      	<div class="film">
+      	  <img src="img/movies/catch_me.jpg" alt="Поймай меня, если сможешь">
+      	  <h3>Поймай меня, если сможешь</h3>
+      	  <p>Леонардо Ди Каприо</p>
+      	</div>
+      	<div class="film">
+      	  <img src="img/movies/nine_lives.jpg" alt="9 жизней">
+      	  <h3>9 жизней</h3>
+      	  <p>Тут суровые мужики плачут</p>
+      	</div>
+      	<div class="film">
+      	  <img src="img/movies/star_wars_four.jpg" alt="Звёздные войны 4">
+      	  <h3>Звёздные войны 4</h3>
+      	  <p>10 Лей из 10</p>
+      	</div>
+      </div>
+      <hr>
+      <div class="link_me">
+        <div class="communication">
+          <p>
+          	Адресс: Республика Марий Эл, Йошкар-Ола
+            Телефон: +7 961 376 83 50
+          </p>
+        </div>
+        <div class="social_network">
+          <a href="https://vk.com/drag_and_drop">
+            <img src="img/network/vk.png" alt="ВК">
+		  </a>
+          <a href="skype:mariakanyushkova">
+            <img src="img/network/skype.png" alt="Skype">
+          </a>
+          <a href="https://plus.google.com/u/0/117313043773435348630">
+            <img src="img/network/google.png" alt="Google">
+          </a>
+          <a href="https://twitter.com/drag0n1ka">
+            <img src="img/network/twitter.png" alt="Twitter">
+          </a>
+          <a href="https://www.instagram.com/ddragonika/">
+            <img src="img/network/instagram.png" alt="Instagram">
+          </a>          
+        </div>	
+      </div>
+    </div>
+  </body>
+</html>
