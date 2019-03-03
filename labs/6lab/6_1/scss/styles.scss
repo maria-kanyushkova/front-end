@@ -1,0 +1,463 @@
+@import "utils";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    @include font-style(900, 78px, "Lato");
+
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+h2 {
+    @include font-style(700, 44px, "Lato");
+
+    color: #506a85;
+    text-align: center;
+    letter-spacing: 0.9px;
+}
+
+h3 {
+    @include font-style(400, 24px, "Source Sans Pro");
+
+    text-align: center;
+    color: #73879c;
+    line-height: 34px;
+    margin-top: 20px;
+    letter-spacing: -0.2px;
+}
+
+h4 {
+    @include font-style(900, 16px, "Lato");
+
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+}
+
+.wrap-container {
+    &_root {
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    }
+
+    &_header {
+        height: 40px;
+        box-shadow: 0.5px 0.866px 0 #e6e9ed;
+        background-color: #f5f7f9;
+    }
+
+    &_nav-bar {
+        height: 112px;
+        box-shadow: 0.5px 0.866px 0 #e6e9ed;
+        background-color: #ffffff;
+    }
+
+    &_about-us {
+        height: 880px;
+        background: url("../img/background/slider/start-slide.png") no-repeat;
+    }
+
+    &_advantages-info {
+        height: 670px;
+        box-shadow: 0.5px 0.866px 0 #e6e9ed;
+        background-color: #ffffff;
+    }
+
+    &_example-work-info {
+        background-color: #f2f5f7;
+    }
+
+    &_cooperation-info {
+        background-color: #ffffff;
+    }
+
+    &_site-map {
+        background-color: #2f4052;
+    }
+
+    &_footer {
+        background-color: #283645;
+    }
+}
+
+.custom-button {
+    @include font-style(700, 18px, "Source Sans Pro");
+
+    border-radius: 3px;
+    background-color: #00bb9b;
+    border-bottom: 2px solid #00a085;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 18px;
+    cursor: pointer;
+
+    &:hover, &:active {
+        border-bottom: 2px solid #148e76;
+        background-color: #17a78b;
+        transition: 0.25s linear;
+    }
+
+}
+
+.contact-info {
+    &__item {
+        @include font-style(400, 12px, "Source Sans Pro");
+
+        color: #506a85;
+        height: 20px;
+        margin: 11px 10px 9px 11px;
+        cursor: default;
+    }
+
+    @include set-image-contacts-header("email");
+    @include set-image-contacts-header("phone");
+}
+
+.networks {
+    margin: 10px 18px;
+
+    &__item {
+        @include square(20px);
+
+        margin-right: 4px;
+        cursor: pointer;
+    }
+
+    @include set-image-networks("facebook");
+    @include set-image-networks("google");
+    @include set-image-networks("twitter");
+    @include set-image-networks("pinterest");
+    @include set-image-networks("behance");
+    @include set-image-networks("dribble");
+}
+
+.nav-bar {
+    padding: 37px 0;
+
+    &__logotype {
+        @include set-image("../img/logo/reen-logo-dark.png");
+
+        height: 40px;
+        width: 160px;
+        margin: 0 16px;
+        display: block;
+    }
+
+    .menu {
+        margin: 10px 0 0 73px;
+
+        &__item {
+            @include font-style(700, 15px, "Source Sans Pro");
+
+            color: #506a85;
+            text-transform: uppercase;
+            margin-right: 45px;
+            cursor: pointer;
+        }
+    }
+
+    &__search-field {
+        @include set-image("../img/background/icon_search.png");
+        @include square(20px);
+
+        margin: 10px 32px 0 0;
+        cursor: pointer;
+    }
+}
+
+.about-us {
+    padding: 275px 100px 302px;
+    cursor: default;
+
+    &__title {
+        margin: 0;
+    }
+
+    &__description {
+        color: #a3b1bf;
+    }
+
+    &__button {
+        margin-top: 58px;
+        width: 295px;
+        height: 65px;
+    }
+}
+
+.advantages-info {
+    padding: 117px 0 130px;
+
+    &__description {
+        margin: 20px 190px 0;
+        letter-spacing: -0.2px;
+    }
+
+    &_items {
+        @include set-image-adventure-item("heart");
+        @include set-image-adventure-item("lamp");
+        @include set-image-adventure-item("star");
+
+        margin: 65px 15px 0;
+
+        .item {
+            &__logo {
+                @include square(70px);
+            }
+
+            &-characteristic {
+                width: calc(100% - 110px);
+                margin: 0 10px 0 30px;
+
+                &__title {
+                    @include font-style(700, 26px, "Lato");
+
+                    color: #506a85;
+                }
+
+                &__description {
+                    @include font-style(400, 16px, "Source Sans Pro");
+
+                    color: #73879c;
+                    margin: 20px 0 0;
+                }
+            }
+        }
+    }
+}
+
+.example-work-info {
+    padding: 120px 0 140px;
+
+    .items {
+        &_big {
+            margin: 75px 0 0;
+
+            &__item {
+                border-radius: 5px;
+            }
+
+            .item {
+                background-color: #ffffff;
+                padding: 25px 0;
+                border-bottom: 2px solid #e6e9ed;
+                margin: 0 15px;
+
+                &__logo {
+                    &.first {
+                        @include set-image("../img/works/grand-motel.png");
+                    }
+
+                    &.second {
+                        @include set-image("../img/works/fresh-branding.png");
+                    }
+
+                    width: 100%;
+                    height: 390px;
+                }
+
+                &__title {
+                    @include font-style(700, 20px, "Lato");
+
+                    color: #506a85;
+                    text-align: center;
+                    letter-spacing: 0.3px;
+                }
+
+                &__author {
+                    @include font-style(400, 14px, "Source Sans Pro");
+
+                    color: #73879c;
+                    margin: 6px 0 0;
+                    text-align: center;
+                }
+            }
+        }
+
+        &_small {
+            margin-top: 80px;
+
+            .items_image {
+                @include set-image-works-item("business-card");
+                @include set-image-works-item("plate");
+                @include set-image-works-item("sticker");
+                @include set-image-works-item("signwall");
+
+                > div {
+                    height: 185px;
+                }
+            }
+
+            .items_navigation {
+                width: 80px;
+                margin-top: 45px;
+
+                .indicator {
+                    @include square(15px);
+
+                    margin-left: 10px;
+                    border-radius: 7px;
+                    background: #283645;
+                }
+
+                .active {
+                    background: #00bc9c;
+                }
+            }
+        }
+    }
+}
+
+.cooperation-info {
+    padding: 115px 130px 130px;
+
+    &__button {
+        width: 150px;
+        margin-top: 38px;
+        padding: 10px;
+    }
+}
+
+.site-map {
+    padding: 70px 15px 75px;
+
+    &__description {
+        @include font-style(400, 14px, "Source Sans Pro");
+
+        color: #a3b1bf;
+        line-height: 22px;
+    }
+
+    .who-we-are_info {
+        &__logo {
+            background: url("../img/logo/reen-logo-light.png") no-repeat;
+            height: 40px;
+            width: 160px;
+        }
+
+        &__description {
+            margin-top: 10px;
+        }
+
+        &__button {
+            @include font-style(700, 15px, "Source Sans Pro");
+
+            color: #a3b1bf;
+            cursor: pointer;
+            width: 110px;
+            background-image: url("../img/background/icon_right.png");
+            background-position: center right;
+            background-repeat: no-repeat;
+            margin-top: 15px;
+
+            &:hover {
+                color: #00bc9c;
+                transition: 0.25s linear;
+            }
+        }
+    }
+
+    .works-info {
+        @include set-image-works-item("business-card");
+        @include set-image-works-item("plate");
+        @include set-image-works-item("sticker");
+        @include set-image-works-item("signwall");
+
+        > div {
+            height: 85px;
+            width: 130px;
+            background-size: 100%;
+
+            &:nth-child(2n) {
+                margin-left: 5px;
+            }
+
+            &:nth-child(1), &:nth-child(2) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .get-in-touch-info {
+        &__description {
+            margin: -6px 0 0;
+        }
+
+        .touch_contacts {
+            margin-top: 10px;
+
+            @include set-image-touch-item("map");
+            @include set-image-touch-item("phone");
+            @include set-image-touch-item("email");
+        }
+    }
+
+    .updates {
+        &__description {
+            margin: -6px;
+        }
+
+        .email_form {
+            margin-top: 20px;
+            height: 42px;
+            position: relative;
+
+            &__input {
+                background-color: #4e5c6c;
+                color: #a3b1bf;
+                border: none;
+                padding-right: 100px;
+            }
+        }
+
+        .subscribe-update_button {
+            @include font-style(600, 14px, "Source Sans Pro");
+
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 88px;
+            height: 30px;
+            padding: 4px;
+        }
+    }
+}
+
+.footer {
+    padding: 30px 15px;
+
+    &__copyright {
+        @include font-style(400, 14px, "Source Sans Pro");
+
+        color: #707e8c;
+    }
+
+    &__map {
+        @include font-style(400, 14px, "Source Sans Pro");
+
+        color: #707e8c;
+
+        &_item {
+            margin-left: 10px;
+            cursor: pointer;
+
+            &:hover {
+                color: #00bc9c;
+                transition: 0.25s linear;
+            }
+        }
+
+        .inactive {
+            cursor: default !important;
+            color: #707e8c !important;
+        }
+    }
+}
