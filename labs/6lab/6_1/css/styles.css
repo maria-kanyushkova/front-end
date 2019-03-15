@@ -44,21 +44,17 @@ h4 {
   margin: auto; }
 
 .wrap-container_header {
-  height: 40px;
   box-shadow: 0.5px 0.866px 0 #e6e9ed;
   background-color: #f5f7f9; }
 
 .wrap-container_nav-bar {
-  height: 112px;
   box-shadow: 0.5px 0.866px 0 #e6e9ed;
   background-color: #ffffff; }
 
 .wrap-container_about-us {
-  height: 880px;
   background: url("../img/background/slider/start-slide.png") no-repeat; }
 
 .wrap-container_advantages-info {
-  height: 670px;
   box-shadow: 0.5px 0.866px 0 #e6e9ed;
   background-color: #ffffff; }
 
@@ -157,7 +153,7 @@ h4 {
     background-repeat: no-repeat; }
 
 .nav-bar {
-  padding: 37px 0; }
+  padding: 35px 0; }
   .nav-bar__logotype {
     background-image: url("../img/logo/reen-logo-dark.png");
     background-position: center;
@@ -441,3 +437,24 @@ h4 {
     .footer__map .inactive {
       cursor: default !important;
       color: #707e8c !important; }
+
+@media (max-width: 1200px) {
+  .nav-bar__logotype {
+    display: none; }
+  .nav-bar .menu {
+    display: none; }
+  .about-us {
+    padding: 100px 50px; }
+  .advantages-info {
+    padding: 50px 0; }
+  .example-work-info {
+    padding: 50px 0; }
+    .example-work-info .items_big .item__logo {
+      height: 300px;
+      width: calc(100% - 30px); }
+      .example-work-info .items_big .item__logo:first-child {
+        margin-left: 15px; } }
+
+@media (max-width: 1024px) {
+  .advantages-info_item {
+    padding: 0 50px 40px; } }

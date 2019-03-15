@@ -49,24 +49,20 @@ h4 {
     }
 
     &_header {
-        height: 40px;
         box-shadow: 0.5px 0.866px 0 #e6e9ed;
         background-color: #f5f7f9;
     }
 
     &_nav-bar {
-        height: 112px;
         box-shadow: 0.5px 0.866px 0 #e6e9ed;
         background-color: #ffffff;
     }
 
     &_about-us {
-        height: 880px;
         background: url("../img/background/slider/start-slide.png") no-repeat;
     }
 
     &_advantages-info {
-        height: 670px;
         box-shadow: 0.5px 0.866px 0 #e6e9ed;
         background-color: #ffffff;
     }
@@ -141,7 +137,7 @@ h4 {
 }
 
 .nav-bar {
-    padding: 37px 0;
+    padding: 35px 0;
 
     &__logotype {
         @include set-image("../img/logo/reen-logo-dark.png");
@@ -458,6 +454,51 @@ h4 {
         .inactive {
             cursor: default !important;
             color: #707e8c !important;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-bar {
+        &__logotype {
+            display: none;
+        }
+
+        .menu {
+            display: none;
+        }
+    }
+
+    .about-us {
+        padding: 100px 50px;
+    }
+
+    .advantages-info {
+        padding: 50px 0;
+    }
+
+    .example-work-info {
+        padding: 50px 0;
+
+        .items_big {
+            .item {
+                &__logo {
+                    height: 300px;
+                    width: calc(100% - 30px);
+
+                    &:first-child {
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .advantages-info {
+        &_item {
+            padding: 0 50px 40px;
         }
     }
 }
