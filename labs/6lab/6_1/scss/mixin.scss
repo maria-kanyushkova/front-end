@@ -34,7 +34,6 @@
 @mixin set-image-works-item($type) {
     .item_#{$type} {
         background-image: url("../img/works/#{$type}.png");
-        background-position: center;
         background-repeat: no-repeat;
     }
 }
