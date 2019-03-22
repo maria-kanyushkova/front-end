@@ -242,18 +242,8 @@ h4 {
       border-bottom: 2px solid #e6e9ed;
       margin: 0 15px; }
       .example-work-info .items_big .item__logo {
-        width: 100%;
-        height: 390px;
-        background-size: calc(100% - 30px);
-        background-position: center !important; }
-        .example-work-info .items_big .item__logo.first {
-          background-image: url("../img/works/grand-motel.png");
-          background-position: center;
-          background-repeat: no-repeat; }
-        .example-work-info .items_big .item__logo.second {
-          background-image: url("../img/works/fresh-branding.png");
-          background-position: center;
-          background-repeat: no-repeat; }
+        width: calc(100% - 30px);
+        margin-left: 15px; }
       .example-work-info .items_big .item__title {
         font-family: "Lato";
         font-size: 20px;
@@ -448,12 +438,8 @@ h4 {
     padding: 50px 20px; }
     .example-work-info .items_big {
       margin: 30px 0 0; }
-      .example-work-info .items_big .item__logo {
-        height: 300px;
-        width: calc(100% - 30px);
-        background-size: 100%; }
-        .example-work-info .items_big .item__logo:first-child {
-          margin-left: 15px; }
+      .example-work-info .items_big .item__logo:first-child {
+        margin-left: 15px; }
       .example-work-info .items_big .item__title {
         font-family: "Lato";
         font-size: 16px;
@@ -461,7 +447,7 @@ h4 {
     .example-work-info .items_small {
       margin-top: 30px; }
       .example-work-info .items_small .items_navigation {
-        margin-top: 0; }
+        margin-top: 10px; }
   .cooperation-info {
     padding: 50px 20px; }
   .site-map {
@@ -472,10 +458,8 @@ h4 {
     padding: 0 50px 40px; }
   .advantages-info__description {
     margin: 20px; }
-  .example-work-info .item__logo {
-    height: 240px !important; }
-  .example-work-info .item .items_small {
-    margin-top: 30px; }
+  .example-work-info .item .items_navigation {
+    margin-top: 0; }
   .site-map_block {
     padding: 20px; }
   .site-map .works-info {
@@ -487,16 +471,12 @@ h4 {
 @media (max-width: 900px) {
   .example-work-info .items_big__item {
     margin-bottom: 10px; }
-    .example-work-info .items_big__item .item__logo {
-      height: 200px !important; }
     .example-work-info .items_big__item .item__title {
       font-family: "Lato";
       font-size: 14px !important;
       font-weight: 700; } }
 
 @media (max-width: 768px) {
-  .example-work-info .item__logo {
-    height: 160px !important; }
   .example-work-info .items_small .items_navigation {
     margin-top: 15px; }
   .site-map_block {
