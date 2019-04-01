@@ -4,12 +4,14 @@
         <title>Reen</title>
         <meta charset="UTF-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/foundation.css">
-        <link rel="stylesheet" href="css/app.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/foundation.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/styles.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="wrap-container wrap-container_header">
@@ -28,6 +30,51 @@
                 </div>
             </div>
         </div>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Бренд</a>
+                    <button type="button" class="navbar-toggle offcanvas-toggle pull-right" data-toggle="offcanvas"
+                            data-target="#js-bootstrap-offcanvas" style="float:left;">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </span>
+                    </button>
+                </div>
+                <div class="navbar-offcanvas navbar-offcanvas-touch" id="js-bootstrap-offcanvas">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Ссылка 1</a></li>
+                        <li><a href="#">Ссылка 2</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ссылка 3<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Ссылка 3-1</a></li>
+                                <li><a href="#">Ссылка 3-2</a></li>
+                                <li><a href="#">Ссылка 3-3</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Ссылка 3-4</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Ссылка 3-5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Что найти?">
+                        </div>
+                        <button type="submit" class="btn btn-default">Поиск</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Ссылка 4</a></li>
+                        <li><a href="#">Ссылка 5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div class="wrap-container wrap-container_nav-bar">
             <div class="wrap-container_root nav-bar clearfix">
                 <a class="nav-bar__logotype float-left" href="#"></a>
@@ -43,71 +90,86 @@
                 <div class="nav-bar__search-field float-right"></div>
             </div>
         </div>
-        <div class="wrap-container wrap-container_about-us clearfix">
-            <div class="wrap-container_root about-us">
-                <h1 class="about-us__title">Made for designers</h1>
-                <h3 class="about-us__description">
-                    Create your online portfolio in minutes with the professionally and lovingly designed REEN website template.
-                    Customize your site with versatile and easy to use features.
-                </h3>
-                <div class="about-us__button custom-button float-center">Get started now</div>
-            </div>
-        </div>
-        <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit="pk1lsk-orbit" data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;" data-resize="b0yegf-orbit" id="b0yegf-orbit" data-events="resize">
-            <div class="orbit-wrapper">
-                <div class="orbit-controls">
-                    <button class="orbit-previous" aria-label="previous" tabindex="0"><span class="show-for-sr">Previous Slide</span>◀</button>
-                    <button class="orbit-next" aria-label="next" tabindex="0"><span class="show-for-sr">Next Slide</span>▶</button>
+        <div class="wrap-container wrap-container_main-slider">
+            <div id="mainCarousel" class="main-slider carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner">
+                    <!--<div class="carousel-item active">-->
+                        <!--<div class="slider-container slider-container_about-us clearfix">-->
+                            <!--<div class="slider-container_root about-us">-->
+                                <!--<h1 class="about-us__title">Made for designers</h1>-->
+                                <!--<h3 class="about-us__description">-->
+                                    <!--Create your online portfolio in minutes with the professionally and lovingly designed REEN website template.-->
+                                    <!--Customize your site with versatile and easy to use features.-->
+                                <!--</h3>-->
+                                <!--<div class="about-us__button custom-button float-center">Get started now</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="carousel-item active">
+                        <div class="slider-container slider-container_fresh clearfix">
+                            <div class="slider-container_root fresh">
+                                <h1 class="fresh__title">Fresh and beautiful design</h1>
+                                <h3 class="fresh__description">
+                                    REEN is designed to showcase your talent and put your work in the forefront. Professionally use
+                                    of typography and layout that fits your content.
+                                </h3>
+                                <div class="fresh__button custom-button float-center">Get started now</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="carousel-item">-->
+                        <!--<div class="slider-container slider-container_clean-code clearfix">-->
+                            <!--<div class="slider-container_root clean-code">-->
+                                <!--<h1 class="clean-code__title">Clean and reusable code</h1>-->
+                                <!--<h3 class="clean-code__description">-->
+                                    <!--The clean code allows you to easily copy code blocks from content modules and past them in-->
+                                    <!--different places or layouts.-->
+                                <!--</h3>-->
+                                <!--<div class="clean-code__button custom-button float-center">Get started now</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="carousel-item">-->
+                        <!--<div class="slider-container slider-container_creative clearfix">-->
+                            <!--<div class="slider-container_root creative">-->
+                                <!--<h1 class="creative__title">Just focus on your creativity</h1>-->
+                                <!--<h3 class="creative__description">-->
+                                    <!--Take a break from messing around with heavy coding and spend your time brainstorming ideas for-->
+                                    <!--your next project.-->
+                                <!--</h3>-->
+                                <!--<div class="creative__button custom-button float-center">Get started now</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="carousel-item">-->
+                        <!--<div class="slider-container slider-container_content-block clearfix">-->
+                            <!--<div class="slider-container_root content-block">-->
+                                <!--<h1 class="content-block__title">Showcase your content</h1>-->
+                                <!--<h3 class="content-block__description">-->
+                                    <!--With REEN you have the possibility to create websites for various contents quickly and easily.-->
+                                    <!--Now it's up to you!-->
+                                <!--</h3>-->
+                                <!--<div class="content-block__button custom-button float-center">Get started now</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 </div>
-                <ul class="orbit-container" tabindex="0" style="height: 423.25px;">
-                    <li class="orbit-slide is-active" data-slide="0" style="display: block;" aria-live="polite">
-                        <figure class="orbit-figure">
-                            <h1 class="about-us__title">Made for designers</h1>
-                            <h3 class="about-us__description">
-                                Create your online portfolio in minutes with the professionally and lovingly designed REEN website template.
-                                Customize your site with versatile and easy to use features.
-                            </h3>
-                            <div class="about-us__button custom-button float-center">Get started now</div>
-                        </figure>
-                    </li>
-                    <li class="orbit-slide" data-slide="1" style="display: none;">
-                        <figure class="orbit-figure">
-                            <h1 class="about-us__title">Made for designers</h1>
-                            <h3 class="about-us__description">
-                                Create your online portfolio in minutes with the professionally and lovingly designed REEN website template.
-                                Customize your site with versatile and easy to use features.
-                            </h3>
-                            <div class="about-us__button custom-button float-center">Get started now</div>
-                        </figure>
-                    </li>
-                    <li class="orbit-slide" data-slide="2" style="display: none;">
-                        <figure class="orbit-figure">
-                            <h1 class="about-us__title">Made for designers</h1>
-                            <h3 class="about-us__description">
-                                Create your online portfolio in minutes with the professionally and lovingly designed REEN website template.
-                                Customize your site with versatile and easy to use features.
-                            </h3>
-                            <div class="about-us__button custom-button float-center">Get started now</div>
-                        </figure>
-                    </li>
-                    <li class="orbit-slide" data-slide="3" style="display: none;">
-                        <figure class="orbit-figure">
-                            <h1 class="about-us__title">Made for designers</h1>
-                            <h3 class="about-us__description">
-                                Create your online portfolio in minutes with the professionally and lovingly designed REEN website template.
-                                Customize your site with versatile and easy to use features.
-                            </h3>
-                            <div class="about-us__button custom-button float-center">Get started now</div>
-                        </figure>
-                    </li>
-                </ul>
+                <a class="carousel-control-prev main-slider__button_prev" href="#mainCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next main-slider__button_next" href="#mainCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <ol class="carousel-indicators">
+                    <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#mainCarousel" data-slide-to="1"></li>
+                    <li data-target="#mainCarousel" data-slide-to="2"></li>
+                    <li data-target="#mainCarousel" data-slide-to="3"></li>
+                    <li data-target="#mainCarousel" data-slide-to="4"></li>
+                </ol>
             </div>
-            <nav class="orbit-bullets">
-                <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
-                <button data-slide="1" class=""><span class="show-for-sr">Second slide details.</span></button>
-                <button data-slide="2" class=""><span class="show-for-sr">Third slide details.</span></button>
-                <button data-slide="3" class=""><span class="show-for-sr">Fourth slide details.</span></button>
-            </nav>
         </div>
         <div class="wrap-container wrap-container_advantages-info">
             <div class="wrap-container_root advantages-info">
@@ -269,8 +331,5 @@
                 </div>
             </div>
         </div>
-        <script>
-            $(document).foundation();
-        </script>
     </body>
 </html>

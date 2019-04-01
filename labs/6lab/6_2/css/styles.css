@@ -51,9 +51,6 @@ h4 {
   box-shadow: 0.5px 0.866px 0 #e6e9ed;
   background-color: #ffffff; }
 
-.wrap-container_about-us {
-  background: url("../img/background/slider/start-slide.png") no-repeat; }
-
 .wrap-container_advantages-info {
   box-shadow: 0.5px 0.866px 0 #e6e9ed;
   background-color: #ffffff; }
@@ -181,17 +178,40 @@ h4 {
     margin: 10px 32px 0 0;
     cursor: pointer; }
 
-.about-us {
-  padding: 275px 100px 302px;
-  cursor: default; }
-  .about-us__title {
-    margin: 0; }
-  .about-us__description {
-    color: #a3b1bf; }
-  .about-us__button {
-    margin-top: 58px;
-    width: 295px;
-    height: 65px; }
+.slider-container {
+  height: 800px; }
+  .slider-container_about-us {
+    background: url("../img/background/slider/start-slide.png") no-repeat; }
+  .slider-container_fresh {
+    background: url("../img/background/slider/item2.png") no-repeat; }
+  .slider-container_clean-code {
+    background: url("../img/background/slider/item3.png") no-repeat; }
+  .slider-container_creative {
+    background: url("../img/background/slider/item4.png") no-repeat; }
+  .slider-container_content-block {
+    background: url("../img/background/slider/item5.png") no-repeat; }
+  .slider-container_root {
+    height: 880px; }
+  .slider-container .about-us {
+    cursor: default;
+    height: 350px;
+    width: 1000px;
+    padding: 240px 0 210px;
+    margin: auto; }
+    .slider-container .about-us__title {
+      margin: 0; }
+    .slider-container .about-us__description {
+      color: #a3b1bf; }
+    .slider-container .about-us__button {
+      margin-top: 58px;
+      width: 295px;
+      height: 65px; }
+  .slider-container .fresh {
+    height: 350px;
+    width: 1000px;
+    cursor: default;
+    padding: 240px 0 210px;
+    margin: auto; }
 
 .advantages-info {
   padding: 117px 0 130px; }
