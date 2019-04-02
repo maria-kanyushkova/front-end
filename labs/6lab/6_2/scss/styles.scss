@@ -134,6 +134,8 @@ h4 {
 
 .nav-bar {
     padding: 35px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgb(204, 204, 204);
 
     &__logotype {
         @include set-image("../img/logo/reen-logo-dark.png");
@@ -158,11 +160,12 @@ h4 {
     }
 
     &__search-field {
-        @include set-image("../img/background/icon_search.png");
+        @include set-image("../img/background/icon_search.png", right);
         @include square(20px);
 
-        margin: 10px 32px 0 0;
+        margin: 18px 32px 0 0;
         cursor: pointer;
+        min-width: 200px;
     }
 }
 
@@ -174,23 +177,19 @@ h4 {
     }
 
     &_fresh {
-        background: url("../img/background/slider/item2.png") no-repeat;
-        //background: url("../img/background/slider/fresh-slide.png") no-repeat;
+        background: url("../img/background/slider/fresh-slide.png") no-repeat;
     }
 
     &_clean-code {
-        background: url("../img/background/slider/item3.png") no-repeat;
-        //background: url("../img/background/slider/code-slide.png") no-repeat;
+        background: url("../img/background/slider/code-slide.png") no-repeat;
     }
 
     &_creative {
-        background: url("../img/background/slider/item4.png") no-repeat;
-        //background: url("../img/background/slider/creative-slide.png") no-repeat;
+        background: url("../img/background/slider/creative-slide.png") no-repeat;
     }
 
     &_content-block {
-        background: url("../img/background/slider/item5.png") no-repeat;
-        //background: url("../img/background/slider/content-slide.png") no-repeat;
+        background: url("../img/background/slider/content-slide.png") no-repeat;
     }
 
     &_root {
@@ -205,6 +204,9 @@ h4 {
         margin: auto;
 
         &__title {
+            @include font-style(900, 73px, "Lato");
+
+            letter-spacing: 4.7px;
             margin: 0;
         }
 
@@ -221,10 +223,123 @@ h4 {
 
     .fresh {
         height: 350px;
-        width: 1000px;
+        width: 1180px;
         cursor: default;
         padding: 240px 0 210px;
         margin: auto;
+
+        &__title {
+            @include font-style(900, 73px, "Lato");
+
+            letter-spacing: 4.7px;
+            max-width: 800px;
+            text-align: right;
+            line-height: 90px;
+        }
+
+        &__description {
+            max-width: 800px;
+            text-align: right;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        &__button {
+            margin-top: 58px;
+            width: 295px;
+            height: 65px;
+            margin-left: 200px;
+        }
+    }
+
+    .clean-code {
+        height: 350px;
+        width: 1155px;
+        cursor: default;
+        padding: 200px 0 210px;
+        margin: auto;
+
+        &__title {
+            @include font-style(900, 73px, "Lato");
+
+            letter-spacing: 4.7px;
+            text-align: left;
+            line-height: 85px;
+            padding: 20px 30px;
+            background-color: #506a85;;
+        }
+
+        &__description {
+            max-width: 700px;
+            text-align: left;
+            color: #506a85;
+            margin: 20px 0 0;
+        }
+
+        &__button {
+            margin-top: 58px;
+            width: 295px;
+            height: 65px;
+            margin-right: 200px;
+        }
+    }
+
+    .creative {
+        height: 350px;
+        width: 1180px;
+        cursor: default;
+        padding: 85px 0 210px;
+        margin: auto;
+
+        &__title {
+            @include font-style(900, 73px, "Lato");
+
+            letter-spacing: 4.7px;
+            text-align: right;
+            line-height: 85px;
+            padding: 20px 30px;
+            background-color: #506a85;
+        }
+
+        &__description {
+            max-width: 800px;
+            text-align: right;
+            color: #ffffff;
+            margin: 20px 0 0;
+        }
+
+        &__button {
+            margin-top: 58px;
+            width: 295px;
+            height: 65px;
+            margin-left: 200px;
+        }
+    }
+
+    .content-block {
+        cursor: default;
+        height: 350px;
+        width: 1000px;
+        padding: 78px 0 210px;
+        margin: auto;
+
+        &__title {
+            @include font-style(900, 73px, "Lato");
+
+            letter-spacing: 4.7px;
+            margin: 0;
+        }
+
+        &__description {
+            color: #a3b1bf;
+            max-width: 750px;
+        }
+
+        &__button {
+            margin-top: 58px;
+            width: 295px;
+            height: 65px;
+        }
     }
 }
 
@@ -490,17 +605,18 @@ h4 {
     }
 }
 
-@media (max-width: 1200px) {
-    .nav-bar {
-        &__logotype {
-            display: none;
-        }
+.toggler-example {
+    padding: 10px 15px;
 
-        .menu {
-            display: none;
-        }
+    &__hamburger {
+        background-image: url("../img/background/hamburger_menu.png");
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 24px;
     }
+}
 
+@media (max-width: 1200px) {
     .about-us {
         padding: 100px 50px;
     }
@@ -578,6 +694,26 @@ h4 {
                 background-size: 124px 85px;
                 width: 130px;
             }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-bar {
+        padding: 10px;
+        width: 100%;
+        border: none;
+
+        .menu {
+            margin: 40px 0 0;
+        }
+
+        &__logotype, &__search-field {
+            display: none;
+        }
+
+        &_desktop {
+            display: none;
         }
     }
 }
