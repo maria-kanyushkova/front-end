@@ -35,6 +35,7 @@
     .item_#{$type} {
         background-image: url("../img/works/#{$type}.png");
         background-repeat: no-repeat;
+        background-position: center;
     }
 }
 

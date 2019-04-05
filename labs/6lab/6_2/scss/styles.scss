@@ -100,6 +100,76 @@ h4 {
 
 }
 
+.contact-us-modal {
+    background-color: #ffffff75;
+
+    &_wrapper {
+        max-width: 970px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        padding: 30px 40px 50px 40px;
+        box-shadow: 0 7px 40px rgba(0, 0, 0, 0.5);
+
+        > div {
+            border: none;
+
+            > div {
+                border: none;
+            }
+        }
+    }
+
+    &__button {
+        margin-top: 40px;
+        width: 295px;
+    }
+
+    .modal-header-block {
+        border: none;
+        padding-top: 0;
+        padding-bottom: 26px;
+        position: relative;
+
+        &__close {
+            @include square(25px);
+
+            background-image: url(../img/button_close.png);
+            background-position: center;
+            background-size: 25px;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 15px;
+            right: 10px;
+        }
+    }
+
+    .modal-input-block {
+        textarea, input {
+            @include font-style(400, 16px, "Source Sans Pro");
+
+            border-radius: 5px;
+            border: 1px solid #dddddd !important;
+            box-shadow: none;
+            background-color: #f8fafd;
+            color: #757575;
+            padding: 12px 18px;
+            line-height: 22px;
+            display: block;
+        }
+
+        &__name, &__email {
+            width: calc((100% - 30px) / 2);
+            height: 48px;
+            margin-bottom: 24px;
+        }
+
+        &__message {
+            height: 135px;
+            vertical-align: top;
+        }
+    }
+}
+
 .contact-info {
     &__item {
         @include font-style(400, 12px, "Source Sans Pro");
@@ -132,10 +202,16 @@ h4 {
     @include set-image-networks("dribble");
 }
 
+.sticky-container {
+    &__background {
+        background-color: #ffffff;
+        border-bottom: 1px solid rgb(204, 204, 204);
+    }
+}
+
 .nav-bar {
     padding: 35px 0;
     background-color: #ffffff;
-    border-bottom: 1px solid rgb(204, 204, 204);
 
     &__logotype {
         @include set-image("../img/logo/reen-logo-dark.png");
@@ -266,6 +342,7 @@ h4 {
             text-align: left;
             line-height: 85px;
             padding: 20px 30px;
+            margin-right: 200px;
             background-color: #506a85;;
         }
 
@@ -355,6 +432,9 @@ h4 {
         @include set-image-adventure-item("heart");
         @include set-image-adventure-item("lamp");
         @include set-image-adventure-item("star");
+        @include set-image-adventure-item("technology");
+        @include set-image-adventure-item("social");
+        @include set-image-adventure-item("marketing");
 
         margin: 65px 15px 0;
 
@@ -381,6 +461,14 @@ h4 {
                 }
             }
         }
+    }
+
+    &_item {
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        width: 295px;
     }
 }
 
@@ -434,26 +522,12 @@ h4 {
                 @include set-image-works-item("signwall");
 
                 > div {
-                    height: 185px;
                     background-size: 90%;
                     background-position: center;
-                }
-            }
 
-            .items_navigation {
-                width: 80px;
-                margin-top: 45px;
-
-                .indicator {
-                    @include square(15px);
-
-                    margin-left: 10px;
-                    border-radius: 7px;
-                    background: #283645;
-                }
-
-                .active {
-                    background: #00bc9c;
+                    > div {
+                        height: 185px;
+                    }
                 }
             }
         }
@@ -616,9 +690,127 @@ h4 {
     }
 }
 
+@media (max-width: 1500px) {
+    .slider-container {
+        background-size: 100% !important;
+        height: 550px;
+
+        .about-us {
+            padding: 190px 0 0;
+            width: calc(100% - 300px);
+
+            &__title {
+                @include font-style(900, 50px, "Lato");
+
+                line-height: 70px;
+            }
+
+            &__description {
+                font-size: 20px;
+            }
+
+            &__button {
+                margin-top: 35px;
+            }
+        }
+
+        .fresh {
+            padding: 100px 0 0;
+            width: calc(100% - 300px);
+
+            &__title {
+                @include font-style(900, 50px, "Lato");
+
+                line-height: 70px;
+            }
+
+            &__description {
+                font-size: 20px;
+            }
+
+            &__button {
+                margin-top: 35px;
+            }
+        }
+
+        .clean-code {
+            padding: 80px 0 0;
+            width: calc(100% - 300px);
+
+            &__title {
+                @include font-style(900, 50px, "Lato");
+
+                line-height: 60px;
+                margin-right: 150px;
+            }
+
+            &__description {
+                font-size: 20px;
+            }
+
+            &__button {
+                margin-top: 35px;
+            }
+        }
+
+        .creative {
+            padding: 70px 0 0;
+            width: calc(100% - 300px);
+
+            &__title {
+                @include font-style(900, 50px, "Lato");
+
+                line-height: 70px;
+            }
+
+            &__description {
+                font-size: 20px;
+            }
+
+            &__button {
+                margin-top: 35px;
+            }
+        }
+
+        .content-block {
+            padding: 190px 0 0;
+            width: calc(100% - 300px);
+
+            &__title {
+                @include font-style(900, 50px, "Lato");
+
+                line-height: 70px;
+            }
+
+            &__description {
+                font-size: 20px;
+            }
+
+            &__button {
+                margin-top: 35px;
+            }
+        }
+    }
+}
+
 @media (max-width: 1200px) {
-    .about-us {
-        padding: 100px 50px;
+    .slider-container {
+        background-size: 120% !important;
+        height: 530px;
+
+        .about-us {
+            padding: 120px 0 0;
+            width: calc(100% - 250px);
+        }
+
+        .clean-code {
+            padding: 50px 0 0;
+            width: calc(100% - 250px);
+        }
+
+        .content-block {
+            padding: 120px 0 0;
+        }
     }
 
     .advantages-info {
@@ -663,6 +855,28 @@ h4 {
 }
 
 @media (max-width: 1024px) {
+    .slider-container {
+        background-size: 120% !important;
+        height: 500px;
+
+        .about-us {
+            padding: 120px 0 0;
+        }
+
+        .fresh {
+            padding: 70px 0 0;
+        }
+
+        .creative {
+            padding: 45px 0 0;
+            &__title {
+                @include font-style(900, 40px, "Lato");
+
+                line-height: 50px;
+            }
+        }
+    }
+
     .advantages-info {
         &_item {
             padding: 0 50px 40px;
@@ -699,6 +913,16 @@ h4 {
 }
 
 @media (max-width: 992px) {
+    .slider-container {
+        .clean-code {
+            &__title {
+                @include font-style(900, 40px, "Lato");
+
+                line-height: 50px;
+            }
+        }
+    }
+
     .nav-bar {
         padding: 10px;
         width: 100%;
@@ -719,6 +943,10 @@ h4 {
 }
 
 @media (max-width: 900px) {
+    .slider-container {
+        display: none;
+    }
+
     .example-work-info {
         .items_big {
             &__item {
@@ -736,9 +964,10 @@ h4 {
 
 @media (max-width: 768px) {
     .example-work-info {
-        .items_small {
-            .items_navigation {
-                margin-top: 15px;
+        .items_image {
+            .item_card {
+                height: 170px;
+                background-size: 90%;
             }
         }
     }

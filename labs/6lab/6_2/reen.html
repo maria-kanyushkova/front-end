@@ -11,6 +11,31 @@
     <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro" rel="stylesheet">
 </head>
 <body>
+<div id="ContactUsModal" class="contact-us-modal modal fade" role="dialog">
+    <div class="modal-dialog contact-us-modal_wrapper">
+        <div class="modal-content">
+            <div class="modal-header modal-header-block">
+                <h2 class="modal-title float-left">Leave a message</h2>
+                <button type="button" class=" modal-header-block__close close float-right"
+                        data-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-input-block clearfix">
+                    <input class="modal-input-block__name float-left" type="text" maxlength="40"
+                           placeholder="Name (Required)">
+                    <input class="modal-input-block__email float-right" type="text" maxlength="40"
+                           placeholder="Email (Required)">
+                    <textarea class="modal-input-block__message" placeholder="Enter your message..."></textarea>
+                </form>
+            </div>
+            <div class="modal-footer clearfix">
+                <button type="button" class="contact-us-modal__button custom-button float-left" data-dismiss="modal">
+                    Submit message
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="wrap-container wrap-container_header">
     <div class="wrap-container_root clearfix">
         <div class="contact-info float-left clearfix">
@@ -28,38 +53,40 @@
     </div>
 </div>
 <div class="wrap-container wrap-container_nav-bar sticky-container" data-sticky-container>
-    <div class="wrap-container_root nav-bar clearfix" data-sticky data-margin-top="0">
-        <a class="nav-bar__logotype float-left" href="#"></a>
-        <div class="nav-bar__search-field float-right"></div>
-        <div class="nav-bar__menu menu nav-bar_desktop float-right clearfix d-xs-none d-sm-none d-md-none d-lg-block d-xl-block"
-            data-magellan data-animation-duration data-animation-easing
-        >
-            <a class="menu__item float-left" href="#features">Features</a>
-            <a class="menu__item float-left" href="#latestWorks">Latest works</a>
-            <a class="menu__item float-left" href="#contactUs">Contact us</a>
-        </div>
-        <nav class="navbar nav-bar nav-bar_mobile-menu navbar-light d-lg-none d-xl-none d-sm-block d-md-block clearfix">
-            <a class="navbar-brand nav-bar_mobile-menu float-left" href="#">Меню</a>
-            <button class="navbar-toggler float-right toggler-example" type="button" data-toggle="collapse"
-                    data-target="#mobileMenu"
-                    aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation"
+    <div class="sticky-container__background" data-sticky data-margin-top="0">
+        <div class="wrap-container_root nav-bar clearfix">
+            <a class="nav-bar__logotype float-left" href="#"></a>
+            <div class="nav-bar__search-field float-right"></div>
+            <div class="nav-bar__menu menu nav-bar_desktop float-right clearfix d-xs-none d-sm-none d-md-none d-lg-block d-xl-block"
+                 data-magellan data-animation-duration data-animation-easing
             >
-                <div class="toggler-example__hamburger"></div>
-            </button>
-            <div class="collapse menu navbar-collapse" id="mobileMenu">
-                <ul class="navbar-nav mr-auto" data-magellan>
-                    <li class="nav-item menu__item">
-                        <a class="nav-link" href="#features">Features</a>
-                    </li>
-                    <li class="nav-item menu__item">
-                        <a class="nav-link" href="#latestWorks">Latest works</a>
-                    </li>
-                    <li class="nav-item menu__item">
-                        <a class="nav-link" href="#contactUs">Contact us</a>
-                    </li>
-                </ul>
+                <a class="menu__item float-left" href="#features">Features</a>
+                <a class="menu__item float-left" href="#latestWorks">Latest works</a>
+                <a class="menu__item float-left" href="#contactUs">Contact us</a>
             </div>
-        </nav>
+            <nav class="navbar nav-bar nav-bar_mobile-menu navbar-light d-lg-none d-xl-none d-sm-block d-md-block clearfix">
+                <a class="navbar-brand nav-bar_mobile-menu float-left" href="#">Меню</a>
+                <button class="navbar-toggler float-right toggler-example" type="button" data-toggle="collapse"
+                        data-target="#mobileMenu"
+                        aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation"
+                >
+                    <div class="toggler-example__hamburger"></div>
+                </button>
+                <div class="collapse menu navbar-collapse" id="mobileMenu">
+                    <ul class="navbar-nav mr-auto" data-magellan>
+                        <li class="nav-item menu__item">
+                            <a class="nav-link" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item menu__item">
+                            <a class="nav-link" href="#latestWorks">Latest works</a>
+                        </li>
+                        <li class="nav-item menu__item">
+                            <a class="nav-link" href="#contactUs">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </div>
 </div>
 <div class="wrap-container wrap-container_main-slider">
@@ -195,6 +222,54 @@
                             </div>
                         </div>
                     </div>
+                    <div id="addInformation" class="advantages-info_items_add collapse">
+                        <div class="grid-x">
+                            <div class="advantages-info_item cell large-8 clearfix">
+                                <div class="item__logo item__logo_technology float-left"></div>
+                                <div class="item-characteristic float-left">
+                                    <div class="item-characteristic__title">Technology</div>
+                                    <div class="item-characteristic__description">
+                                        Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut
+                                        labor.
+                                        Laceaque
+                                        quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped
+                                        modis volor.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantages-info_item cell large-8 clearfix">
+                                <div class="item__logo item__logo_social float-left"></div>
+                                <div class="item-characteristic float-left">
+                                    <div class="item-characteristic__title">Social</div>
+                                    <div class="item-characteristic__description">
+                                        Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut
+                                        labor.
+                                        Laceaque
+                                        quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped
+                                        modis volor.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantages-info_item cell large-8 clearfix">
+                                <div class="item__logo item__logo_marketing float-left"></div>
+                                <div class="item-characteristic float-left">
+                                    <div class="item-characteristic__title">Marketing</div>
+                                    <div class="item-characteristic__description">
+                                        Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut
+                                        labor.
+                                        Laceaque
+                                        quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped
+                                        modis volor.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="advantages-info__button custom-button float-center" data-toggle="collapse"
+                     href="#addInformation" role="button" aria-expanded="false" aria-controls="addInformation"
+                >
+                    Show advantages
                 </div>
             </div>
         </div>
@@ -223,16 +298,35 @@
                     </div>
                 </div>
                 <div class="items_small custom-slider clearfix">
-                    <div class="items_image grid-x">
-                        <div class="item_business-card cell medium-6 small-12"></div>
-                        <div class="item_plate cell medium-6 small-12"></div>
-                        <div class="item_sticker cell medium-6 small-12"></div>
-                        <div class="item_signwall cell medium-6 small-12"></div>
-                    </div>
-                    <div class="items_navigation clearfix float-center">
-                        <div class="indicator float-left"></div>
-                        <div class="indicator active float-left"></div>
-                        <div class="indicator float-left"></div>
+                    <div id="workCarousel" class="main-slider carousel slide" data-ride="carousel">
+                        <div class="carousel-inner items_image">
+                            <div class="carousel-item grid-x clearfix active">
+                                <div class="item_card item_business-card cell medium-6 small-12 float-left"></div>
+                                <div class="item_card item_plate cell medium-6 small-12 float-left"></div>
+                                <div class="item_card item_sticker cell medium-6 small-12 float-left"></div>
+                                <div class="item_card item_signwall cell medium-6 small-12 float-left"></div>
+                            </div>
+                            <div class="carousel-item grid-x clearfix">
+                                <div class="item_card item_business-card cell medium-6 small-12 float-left"></div>
+                                <div class="item_card item_plate cell medium-6 small-12 float-left"></div>
+                                <div class="item_card item_sticker cell medium-6 small-12 float-left"></div>
+                                <div class="item_card item_signwall cell medium-6 small-12 float-left"></div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev main-slider__button_prev" href="#workCarousel" role="button"
+                           data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next main-slider__button_next" href="#workCarousel" role="button"
+                           data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <ol class="carousel-indicators">
+                            <li data-target="#workCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#workCarousel" data-slide-to="1"></li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -247,7 +341,9 @@
                     sitiorem
                     rest non restibusaes maio es dem tumquam.
                 </h3>
-                <div class="cooperation-info__button custom-button float-center">Get in touch</div>
+                <div class="cooperation-info__button custom-button float-center" data-toggle="modal"
+                     data-target="#ContactUsModal">Get in touch
+                </div>
             </div>
         </div>
     </section>
