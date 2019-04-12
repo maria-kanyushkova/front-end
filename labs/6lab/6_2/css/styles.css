@@ -205,7 +205,8 @@ h4 {
 
 .nav-bar {
   padding: 35px 0;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  display: block; }
   .nav-bar__logotype {
     background-image: url("../img/logo/reen-logo-dark.png");
     background-position: center;
@@ -744,6 +745,9 @@ h4 {
       width: 130px; } }
 
 @media (max-width: 992px) {
+  .sticky-container {
+    max-height: 83px;
+    z-index: 2; }
   .slider-container .clean-code__title {
     font-family: "Lato";
     font-size: 40px;
@@ -761,7 +765,7 @@ h4 {
       display: none; } }
 
 @media (max-width: 900px) {
-  .slider-container {
+  .wrap-container_main-slider {
     display: none; }
   .example-work-info .items_big__item {
     margin-bottom: 10px; }

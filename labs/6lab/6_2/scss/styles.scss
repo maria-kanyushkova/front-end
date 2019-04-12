@@ -212,6 +212,7 @@ h4 {
 .nav-bar {
     padding: 35px 0;
     background-color: #ffffff;
+    display: block;
 
     &__logotype {
         @include set-image("../img/logo/reen-logo-dark.png");
@@ -869,6 +870,7 @@ h4 {
 
         .creative {
             padding: 45px 0 0;
+
             &__title {
                 @include font-style(900, 40px, "Lato");
 
@@ -913,6 +915,11 @@ h4 {
 }
 
 @media (max-width: 992px) {
+    .sticky-container {
+        max-height: 83px;
+        z-index: 2;
+    }
+
     .slider-container {
         .clean-code {
             &__title {
@@ -943,8 +950,10 @@ h4 {
 }
 
 @media (max-width: 900px) {
-    .slider-container {
-        display: none;
+    .wrap-container {
+        &_main-slider {
+            display: none;
+        }
     }
 
     .example-work-info {
