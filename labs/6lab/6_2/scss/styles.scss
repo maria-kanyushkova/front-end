@@ -1,4 +1,5 @@
 @import "utils";
+@import "toggle-menu";
 
 body {
     margin: 0;
@@ -54,7 +55,6 @@ h4 {
     }
 
     &_nav-bar {
-        box-shadow: 0.5px 0.866px 0 #e6e9ed;
         background-color: #ffffff;
     }
 
@@ -223,6 +223,15 @@ h4 {
         display: block;
     }
 
+    .mobile-menu {
+        &__title {
+            @include font-style(600, 20px, "Lato");
+
+            color: #506a85;
+            text-transform: uppercase;
+        }
+    }
+
     .menu {
         margin: 10px 0 0 73px;
 
@@ -250,23 +259,23 @@ h4 {
     height: 800px;
 
     &_about-us {
-        background: url("../img/background/slider/start-slide.png") no-repeat;
+        background: url("../img/background/slider/start-slide-min.jpg") no-repeat;
     }
 
     &_fresh {
-        background: url("../img/background/slider/fresh-slide.png") no-repeat;
+        background: url("../img/background/slider/fresh-slide-min.jpg") no-repeat;
     }
 
     &_clean-code {
-        background: url("../img/background/slider/code-slide.png") no-repeat;
+        background: url("../img/background/slider/code-slide-min.jpg") no-repeat;
     }
 
     &_creative {
-        background: url("../img/background/slider/creative-slide.png") no-repeat;
+        background: url("../img/background/slider/creative-slide-min.jpg") no-repeat;
     }
 
     &_content-block {
-        background: url("../img/background/slider/content-slide.png") no-repeat;
+        background: url("../img/background/slider/content-slide-min.jpg") no-repeat;
     }
 
     &_root {
@@ -609,6 +618,10 @@ h4 {
 
         .touch_contacts {
             margin-top: 10px;
+            
+            > span {
+                display: block;
+            }
 
             @include set-image-touch-item("map");
             @include set-image-touch-item("phone");
@@ -681,14 +694,7 @@ h4 {
 }
 
 .toggler-example {
-    padding: 10px 15px;
-
-    &__hamburger {
-        background-image: url("../img/background/hamburger_menu.png");
-        background-repeat: no-repeat;
-        height: 20px;
-        width: 24px;
-    }
+    padding: 10px 10px;
 }
 
 @media (max-width: 1500px) {
@@ -774,7 +780,7 @@ h4 {
         }
 
         .content-block {
-            padding: 190px 0 0;
+            padding: 120px 0 0;
             width: calc(100% - 300px);
 
             &__title {
@@ -810,7 +816,7 @@ h4 {
         }
 
         .content-block {
-            padding: 120px 0 0;
+            padding: 80px 0 0;
         }
     }
 
@@ -839,6 +845,12 @@ h4 {
 
         .items_small {
             margin-top: 30px;
+
+            .items_image {
+                > div > div {
+                    background-size: 90%;
+                }
+            }
 
             .items_navigation {
                 margin-top: 10px;
@@ -882,6 +894,7 @@ h4 {
     .advantages-info {
         &_item {
             padding: 0 50px 40px;
+            margin-bottom: 0;
         }
 
         &__description {
@@ -916,7 +929,7 @@ h4 {
 
 @media (max-width: 992px) {
     .sticky-container {
-        max-height: 83px;
+        max-height: 80px;
         z-index: 2;
     }
 
