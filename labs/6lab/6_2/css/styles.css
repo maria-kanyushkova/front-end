@@ -815,7 +815,9 @@ h4 {
     width: 100%;
     border: none; }
     .nav-bar .menu {
-      margin: 40px 0 0; }
+      margin: 50px 0 0; }
+      .nav-bar .menu__item {
+        margin: 10px 0; }
     .nav-bar__logotype, .nav-bar__search-field {
       display: none; }
     .nav-bar_desktop {
@@ -824,6 +826,8 @@ h4 {
 @media (max-width: 900px) {
   .wrap-container_main-slider {
     display: none; }
+  .advantages-info_item {
+    padding: 0 0 40px; }
   .example-work-info .items_big__item {
     margin-bottom: 10px; }
     .example-work-info .items_big__item .item__title {
