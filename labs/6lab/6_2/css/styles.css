@@ -53,17 +53,21 @@
 body {
   margin: 0;
   padding: 0; }
+  body:after {
+    content: url("../img/background/slider/start-slide-min.jpg") url("../img/background/slider/fresh-slide-min.jpg") url("../img/background/slider/code-slide-min.jpg") url("../img/background/slider/creative-slide-min.jpg") url("../img/background/slider/content-slide-min.jpg");
+    display: none; }
 
-h1 {
+h1, .slider__title {
   font-family: "Lato";
   font-size: 78px;
   font-weight: 900;
   color: #ffffff;
   text-align: center;
   letter-spacing: 5px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 5px; }
 
-h2 {
+h2, .container__title {
   font-family: "Lato";
   font-size: 44px;
   font-weight: 700;
@@ -71,7 +75,7 @@ h2 {
   text-align: center;
   letter-spacing: 0.9px; }
 
-h3 {
+h3, .slider__description, .container__description {
   font-family: "Source Sans Pro";
   font-size: 24px;
   font-weight: 400;
@@ -81,7 +85,7 @@ h3 {
   margin-top: 20px;
   letter-spacing: -0.2px; }
 
-h4 {
+h4, .footer__title {
   font-family: "Lato";
   font-size: 16px;
   font-weight: 900;
@@ -136,7 +140,7 @@ h4 {
     transition: 0.25s linear; }
 
 .contact-us-modal {
-  background-color: #ffffff75; }
+  background-color: #00000050; }
   .contact-us-modal_wrapper {
     max-width: 970px;
     border-radius: 10px;
@@ -303,7 +307,7 @@ h4 {
   .slider-container_creative {
     background: url("../img/background/slider/creative-slide-min.jpg") no-repeat; }
   .slider-container_content-block {
-    background: url("../img/background/slider/content-slide-min.jpg") no-repeat; }
+    background: no-repeat; }
   .slider-container_root {
     height: 880px; }
   .slider-container .about-us {
@@ -656,10 +660,12 @@ h4 {
     font-size: 14px;
     font-weight: 400;
     color: #707e8c;
-    float: right; }
+    float: right;
+    margin: 0; }
     .footer__map_item {
       margin-left: 10px;
-      cursor: pointer; }
+      cursor: pointer;
+      list-style-type: none; }
       .footer__map_item:hover {
         color: #00bc9c;
         transition: 0.25s linear; }

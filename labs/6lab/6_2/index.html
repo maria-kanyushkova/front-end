@@ -9,32 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/styles.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro" rel="stylesheet">
-    <script src="js/jquery/preload-image.js"></script>
-    <script src="js/jquery/preload-image.min.js"></script>
 </head>
 <body>
-<div class="contact-us-modal modal fade" id="ContactUsModal" role="dialog">
-    <div class="modal-dialog contact-us-modal_wrapper">
-        <div class="modal-content">
-            <div class="modal-header modal-header-block">
-                <h2 class="modal-title float-left">Leave a message</h2>
-                <button class=" modal-header-block__close close float-right" data-dismiss="modal" type="button"></button>
-            </div>
-            <div class="modal-body">
-                <form class="modal-input-block clearfix">
-                    <input class="modal-input-block__name float-left" maxlength="40" placeholder="Name (Required)" type="text"/>
-                    <input class="modal-input-block__email float-right" maxlength="40" placeholder="Email (Required)" type="text"/>
-                    <textarea class="modal-input-block__message" placeholder="Enter your message..."></textarea>
-                </form>
-            </div>
-            <div class="modal-footer clearfix">
-                <button class="contact-us-modal__button custom-button float-left" data-dismiss="modal" type="button">
-                    Submit message
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="wrap-container wrap-container_header">
     <div class="wrap-container_root clearfix">
         <div class="contact-info float-left clearfix">
@@ -87,16 +63,16 @@
     </div>
 </div>
 <div class="wrap-container wrap-container_main-slider">
-    <div class="main-slider carousel slide carousel-fade" data-ride="carousel" id="mainCarousel">
+    <div class="main-slider carousel slide carousel-fade" data-ride="false" id="mainCarousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="slider-container slider-container_about-us clearfix">
                     <div class="slider-container_root about-us clearfix">
                         <h1 class="about-us__title">Made for designers</h1>
-                        <h3 class="about-us__description">
+                        <p class="about-us__description slider__description">
                             Create your online portfolio in minutes with the professionally and lovingly designed REEN
                             website template. Customize your site with versatile and easy to use features.
-                        </h3>
+                        </p>
                         <div class="about-us__button custom-button float-center">Get started now</div>
                     </div>
                 </div>
@@ -104,11 +80,11 @@
             <div class="carousel-item">
                 <div class="slider-container slider-container_fresh clearfix">
                     <div class="slider-container_root fresh clearfix">
-                        <h1 class="fresh__title float-right">Fresh and beautiful design</h1>
-                        <h3 class="fresh__description float-right">
+                        <div class="fresh__title slider__title float-right">Fresh and beautiful design</div>
+                        <p class="fresh__description slider__description float-right">
                             REEN is designed to showcase your talent and put your work in the forefront. Professionally
                             use of typography and layout that fits your content.
-                        </h3>
+                        </p>
                         <div class="fresh__button custom-button float-right">Get started now</div>
                     </div>
                 </div>
@@ -116,12 +92,12 @@
             <div class="carousel-item">
                 <div class="slider-container slider-container_clean-code clearfix">
                     <div class="slider-container_root clean-code clearfix">
-                        <h1 class="clean-code__title float-left">Clean and</h1>
-                        <h1 class="clean-code__title float-left">reusable code</h1>
-                        <h3 class="clean-code__description float-left">
+                        <div class="clean-code__title slider__title float-left">Clean and</div>
+                        <div class="clean-code__title slider__title float-left">reusable code</div>
+                        <p class="clean-code__description slider__description float-left">
                             The clean code allows you to easily copy code blocks from content modules and past them in
                             different places or layouts.
-                        </h3>
+                        </p>
                         <div class="clean-code__button custom-button float-left">Get started now</div>
                     </div>
                 </div>
@@ -129,12 +105,12 @@
             <div class="carousel-item">
                 <div class="slider-container slider-container_creative clearfix">
                     <div class="slider-container_root creative clearfix">
-                        <h1 class="creative__title float-right">Just focus on</h1>
-                        <h1 class="creative__title float-right">your creativity</h1>
-                        <h3 class="creative__description float-right">
+                        <div class="creative__title slider__title float-right">Just focus on</div>
+                        <div class="creative__title slider__title float-right">your creativity</div>
+                        <p class="creative__description slider__description float-right">
                             Take a break from messing around with heavy coding and spend your time brainstorming ideas
                             for your next project.
-                        </h3>
+                        </p>
                         <div class="creative__button custom-button float-right">Get started now</div>
                     </div>
                 </div>
@@ -142,12 +118,12 @@
             <div class="carousel-item">
                 <div class="slider-container slider-container_content-block clearfix">
                     <div class="slider-container_root content-block clearfix">
-                        <h1 class="content-block__title float-center">Showcase</h1>
-                        <h1 class="content-block__title float-center">your content</h1>
-                        <h3 class="content-block__description float-center">
+                        <div class="content-block__title slider__title float-center">Showcase</div>
+                        <div class="content-block__title slider__title float-center">your content</div>
+                        <p class="content-block__description slider__description float-center">
                             With REEN you have the possibility to create websites for various contents quickly and
                             easily. Now it's up to you!
-                        </h3>
+                        </p>
                         <div class="content-block__button custom-button float-center">Get started now</div>
                     </div>
                 </div>
@@ -171,15 +147,15 @@
     </div>
 </div>
 <div class="sections">
-    <section data-magellan-target="features" id="features">
+    <div data-magellan-target="features" id="features">
         <div class="wrap-container wrap-container_advantages-info">
             <div class="wrap-container_root advantages-info">
                 <h2 class="advantages-info__title">Beautiful. Clean. Responsive</h2>
-                <h3 class="advantages-info__description">
+                <p class="advantages-info__description container__description">
                     REEN is a high-quality solution for those who want a beautiful website in no time. It's fully
                     responsive and will adapt itself to any mobile device. iPad, iPhone, Android, it doesn't matter.
                     Your content will always looks its absolute best.
-                </h3>
+                </p>
                 <div class="advantages-info_items grid-x">
                     <div class="advantages-info_item cell large-8 clearfix">
                         <div class="item__logo item__logo_heart float-left"></div>
@@ -254,32 +230,32 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section data-magellan-target="latestWorks" id="latestWorks">
+    </div>
+    <div data-magellan-target="latestWorks" id="latestWorks">
         <div class="wrap-container wrap-container_example-work-info">
             <div class="wrap-container_root example-work-info">
                 <h2 class="example-work-info__title">Check out our latest works</h2>
-                <h3 class="example-work-info__description">
+                <p class="example-work-info__description container__description">
                     Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor.
-                </h3>
+                </p>
                 <div class="items_big grid-x">
                     <div class="items_big__item cell medium-12 small-24">
                         <img alt="Grand Motel" class="item__logo first" src="img/works/grand-motel.jpg"/>
                         <div class="item">
                             <p class="item__title">Grand Motel gets an identity brushup</p>
-                            <p class="item__author">Identity</p>
+                            <div class="item__author">Identity</div>
                         </div>
                     </div>
                     <div class="items_big__item cell medium-12 small-24">
                         <img alt="Fresh branding" class="item__logo second" src="img/works/fresh-branding.jpg"/>
                         <div class="item">
                             <p class="item__title">Fresh branding for a creative startup</p>
-                            <p class="item__author">Identity</p>
+                            <div class="item__author">Identity</div>
                         </div>
                     </div>
                 </div>
                 <div class="items_small custom-slider clearfix">
-                    <div class="main-slider carousel slide" data-ride="carousel" id="workCarousel">
+                    <div class="main-slider carousel slide" data-ride="false" id="workCarousel">
                         <div class="carousel-inner items_image">
                             <div class="carousel-item grid-x clearfix active">
                                 <div class="item_card item_business-card cell medium-6 small-12 float-left"></div>
@@ -312,26 +288,26 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section data-magellan-target="contactUs" id="contactUs">
+    </div>
+    <div data-magellan-target="contactUs" id="contactUs">
         <div class="wrap-container wrap-container_cooperation-info">
             <div class="wrap-container_root cooperation-info clearfix">
                 <h2 class="cooperation-info__title">Want to work with us?</h2>
-                <h3 class="cooperation-info__description">
+                <p class="cooperation-info__description container__description">
                     Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor. Laceaque quiae
                     sitiorem rest non restibusaes maio es dem tumquam.
-                </h3>
+                </p>
                 <div class="cooperation-info__button custom-button float-center" data-target="#ContactUsModal" data-toggle="modal">
                     Get in touch
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </div>
 <div class="wrap-container wrap-container_site-map">
     <div class="wrap-container_root site-map grid-x">
         <div class="site-map_block who-we-are cell medium-12 large-6">
-            <h4 class="who-we-are__title">Who we are</h4>
+            <div class="who-we-are__title footer__title">Who we are</div>
             <div class="who-we-are_info">
                 <div class="who-we-are_info__logo"></div>
                 <p class="who-we-are_info__description site-map__description">
@@ -342,7 +318,7 @@
             </div>
         </div>
         <div class="site-map_block cell medium-12 large-6">
-            <h4 class="site-map_block__title">Latest works</h4>
+            <div class="site-map_block__title footer__title">Latest works</div>
             <div class="works-info grid-x">
                 <div class="item_business-card cell medium-12"></div>
                 <div class="item_plate cell medium-12"></div>
@@ -351,7 +327,7 @@
             </div>
         </div>
         <div class="site-map_block cell medium-12 large-6">
-            <h4 class="site-map_block__title">Get in touch</h4>
+            <div class="site-map_block__title footer__title">Get in touch</div>
             <div class="get-in-touch-info">
                 <p class="get-in-touch-info__description site-map__description">
                     Doloreiur quia commolu ptatemp dolupta oreprerum tibusam eumenis et consent accullignis dentibea autem inisita.
@@ -364,7 +340,7 @@
             </div>
         </div>
         <div class="site-map_block updates cell medium-12 large-6">
-            <h4 class="site-map_block__title">Free updates</h4>
+            <div class="site-map_block__title footer__title">Free updates</div>
             <div class="site-map_block__container">
                 <p class="updates__description site-map__description">
                     Conecus iure posae volor remped modis aut lor volor accabora incim resto explabo.
@@ -380,18 +356,40 @@
 <div class="wrap-container wrap-container_footer">
     <div class="wrap-container_root footer clearfix">
         <div class="footer__copyright">© 2014 REEN. All rights reserved.</div>
-        <div class="footer__map clearfix">
-            <div class="footer__map_item float-left">Home</div>
-            <div class="footer__map_item inactive float-left">·</div>
-            <div class="footer__map_item float-left">Portfolio</div>
-            <div class="footer__map_item inactive float-left">·</div>
-            <div class="footer__map_item float-left">Blog</div>
-            <div class="footer__map_item inactive float-left">·</div>
-            <div class="footer__map_item float-left">About</div>
-            <div class="footer__map_item inactive float-left">·</div>
-            <div class="footer__map_item float-left">Services</div>
-            <div class="footer__map_item inactive float-left">·</div>
-            <div class="footer__map_item float-left">Contact</div>
+        <ul class="footer__map clearfix">
+            <li class="footer__map_item float-left">Home</li>
+            <li class="footer__map_item inactive float-left">·</li>
+            <li class="footer__map_item float-left">Portfolio</li>
+            <li class="footer__map_item inactive float-left">·</li>
+            <li class="footer__map_item float-left">Blog</li>
+            <li class="footer__map_item inactive float-left">·</li>
+            <li class="footer__map_item float-left">About</li>
+            <li class="footer__map_item inactive float-left">·</li>
+            <li class="footer__map_item float-left">Services</li>
+            <li class="footer__map_item inactive float-left">·</li>
+            <li class="footer__map_item float-left">Contact</li>
+        </ul>
+    </div>
+</div>
+<div class="contact-us-modal modal fade" id="ContactUsModal" role="dialog">
+    <div class="modal-dialog contact-us-modal_wrapper">
+        <div class="modal-content">
+            <div class="modal-header modal-header-block">
+                <h2 class="modal-title float-left">Leave a message</h2>
+                <button class=" modal-header-block__close close float-right" data-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-input-block clearfix">
+                    <input class="modal-input-block__name float-left" maxlength="40" placeholder="Name (Required)" type="text"/>
+                    <input class="modal-input-block__email float-right" maxlength="40" placeholder="Email (Required)" type="text"/>
+                    <textarea class="modal-input-block__message" placeholder="Enter your message..."></textarea>
+                </form>
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="contact-us-modal__button custom-button float-left" data-dismiss="modal" type="button">
+                    Submit message
+                </button>
+            </div>
         </div>
     </div>
 </div>
@@ -408,6 +406,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
 <script src="js/jquery/toggle-menu.js"></script>
+<script src="js/lib/bcSwipe.min.js"></script>
+<script src="js/jquery/slider.js"></script>
 <script>
     $(document).foundation();
 </script>

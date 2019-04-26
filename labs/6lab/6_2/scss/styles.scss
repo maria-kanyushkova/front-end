@@ -4,18 +4,23 @@
 body {
     margin: 0;
     padding: 0;
+
+    &:after {
+        @include preloadImage();
+    }
 }
 
-h1 {
+h1, .slider__title {
     @include font-style(900, 78px, "Lato");
 
     color: #ffffff;
     text-align: center;
     letter-spacing: 5px;
     text-transform: uppercase;
+    margin-bottom: 5px;
 }
 
-h2 {
+h2, .container__title {
     @include font-style(700, 44px, "Lato");
 
     color: #506a85;
@@ -23,7 +28,7 @@ h2 {
     letter-spacing: 0.9px;
 }
 
-h3 {
+h3, .slider__description, .container__description {
     @include font-style(400, 24px, "Source Sans Pro");
 
     text-align: center;
@@ -33,7 +38,7 @@ h3 {
     letter-spacing: -0.2px;
 }
 
-h4 {
+h4, .footer__title {
     @include font-style(900, 16px, "Lato");
 
     color: #ffffff;
@@ -101,7 +106,7 @@ h4 {
 }
 
 .contact-us-modal {
-    background-color: #ffffff75;
+    background-color: #00000050;
 
     &_wrapper {
         max-width: 970px;
@@ -275,7 +280,7 @@ h4 {
     }
 
     &_content-block {
-        background: url("../img/background/slider/content-slide-min.jpg") no-repeat;
+        background:  no-repeat;
     }
 
     &_root {
@@ -675,10 +680,12 @@ h4 {
 
         color: #707e8c;
         float: right;
+        margin: 0;
 
         &_item {
             margin-left: 10px;
             cursor: pointer;
+            list-style-type: none;
 
             &:hover {
                 color: #00bc9c;

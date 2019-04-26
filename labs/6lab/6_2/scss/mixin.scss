@@ -1,3 +1,13 @@
+@mixin preloadImage() {
+    content:
+        url("../img/background/slider/start-slide-min.jpg")
+        url("../img/background/slider/fresh-slide-min.jpg")
+        url("../img/background/slider/code-slide-min.jpg")
+        url("../img/background/slider/creative-slide-min.jpg")
+        url("../img/background/slider/content-slide-min.jpg");
+    display: none;
+}
+
 @mixin set-image-networks($type) {
     .networks__item_#{$type} {
         background-image: url("../img/background/social_network/icon_#{$type}.png");
