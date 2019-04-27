@@ -307,7 +307,7 @@ h4, .footer__title {
   .slider-container_creative {
     background: url("../img/background/slider/creative-slide-min.jpg") no-repeat; }
   .slider-container_content-block {
-    background: no-repeat; }
+    background: url("../img/background/slider/content-slide-min.jpg") no-repeat; }
   .slider-container_root {
     height: 880px; }
   .slider-container .about-us {
