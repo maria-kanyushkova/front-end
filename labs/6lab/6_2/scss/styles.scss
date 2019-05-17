@@ -138,7 +138,7 @@ h4, .footer__title {
         &__close {
             @include square(25px);
 
-            background-image: url(../img/button_close.png);
+            background-image: url(../img/button_close.webp);
             background-position: center;
             background-size: 25px;
             background-repeat: no-repeat;
@@ -220,7 +220,7 @@ h4, .footer__title {
     display: block;
 
     &__logotype {
-        @include set-image("../img/logo/reen-logo-dark.png");
+        @include set-image("../img/logo/reen-logo-dark.webp");
 
         height: 40px;
         width: 160px;
@@ -234,6 +234,30 @@ h4, .footer__title {
 
             color: #506a85;
             text-transform: uppercase;
+        }
+    }
+
+    &_mobile-menu {
+        padding: 0;
+
+        > a {
+            display: none;
+        }
+
+        > button {
+            display: none;
+        }
+
+        > div {
+            width: 400px;
+
+            .nav-link {
+                padding: 5px 0;
+            }
+        }
+
+        .navbar-nav {
+            flex-direction: row;
         }
     }
 
@@ -251,12 +275,49 @@ h4, .footer__title {
     }
 
     &__search-field {
-        @include set-image("../img/background/icon_search.png", right);
+        @include set-image("../img/background/icon_search.webp", right);
         @include square(20px);
 
-        margin: 18px 32px 0 0;
+        margin: 13px 32px 0 0;
         cursor: pointer;
         min-width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: block !important;
+        height: 25px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-bar {
+        &_mobile-menu {
+            > a {
+                display: block;
+            }
+
+            > button {
+                display: block;
+            }
+
+            > div {
+                width: 100%;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+
+        .show {
+            display: block;
+        }
+
+        .collapse:not(.show) {
+            display: none;
+        }
     }
 }
 
@@ -264,23 +325,23 @@ h4, .footer__title {
     height: 800px;
 
     &_about-us {
-        background: url("../img/background/slider/start-slide-min.jpg") no-repeat;
+        background: url("../img/background/slider/start-slide-min.webp") no-repeat;
     }
 
     &_fresh {
-        background: url("../img/background/slider/fresh-slide-min.jpg") no-repeat;
+        background: url("../img/background/slider/fresh-slide-min.webp") no-repeat;
     }
 
     &_clean-code {
-        background: url("../img/background/slider/code-slide-min.jpg") no-repeat;
+        background: url("../img/background/slider/code-slide-min.webp") no-repeat;
     }
 
     &_creative {
-        background: url("../img/background/slider/creative-slide-min.jpg") no-repeat;
+        background: url("../img/background/slider/creative-slide-min.webp") no-repeat;
     }
 
     &_content-block {
-        background: url("../img/background/slider/content-slide-min.jpg") no-repeat;
+        background: url("../img/background/slider/content-slide-min.webp") no-repeat;
     }
 
     &_root {
@@ -530,18 +591,16 @@ h4, .footer__title {
         &_small {
             margin-top: 80px;
 
+            .main-slider {
+                margin: 0 10px;
+            }
+
             .items_image {
-                @include set-image-works-item("business-card");
-                @include set-image-works-item("plate");
-                @include set-image-works-item("sticker");
-                @include set-image-works-item("signwall");
-
                 > div {
-                    background-size: 90%;
-                    background-position: center;
 
-                    > div {
-                        height: 185px;
+                    > img {
+                        padding: 0 5px;
+                        height: auto;
                     }
                 }
             }
@@ -575,7 +634,7 @@ h4, .footer__title {
 
     .who-we-are_info {
         &__logo {
-            background: url("../img/logo/reen-logo-light.png") no-repeat;
+            background: url("../img/logo/reen-logo-light.webp") no-repeat;
             height: 40px;
             width: 160px;
         }
@@ -590,7 +649,7 @@ h4, .footer__title {
             color: #a3b1bf;
             cursor: pointer;
             width: 110px;
-            background-image: url("../img/background/icon_right.png");
+            background-image: url("../img/background/icon_right.webp");
             background-position: center right;
             background-repeat: no-repeat;
             margin-top: 15px;
@@ -623,7 +682,7 @@ h4, .footer__title {
 
         .touch_contacts {
             margin-top: 10px;
-            
+
             > span {
                 display: block;
             }
@@ -984,7 +1043,7 @@ h4, .footer__title {
         padding: 0 0 40px;
     }
 
-        .example-work-info {
+    .example-work-info {
         .items_big {
             &__item {
                 margin-bottom: 10px;
@@ -1039,12 +1098,16 @@ h4, .footer__title {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 639px) {
     .example-work-info {
         .item {
             &__logo {
                 height: 300px !important;
             }
+        }
+
+        .item_card_min {
+            display: none;
         }
     }
 }
