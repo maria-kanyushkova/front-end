@@ -520,6 +520,7 @@ h4, .footer__title {
       margin: 0 15px; }
       .example-work-info .items_big .item__logo {
         width: calc(100% - 30px);
+        max-height: 390px;
         margin-left: 15px; }
       .example-work-info .items_big .item__title {
         font-family: "Lato";
